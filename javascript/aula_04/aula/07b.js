@@ -1,5 +1,10 @@
 let escolha = prompt('Informe sua escolha: pedra, papel ou tesoura?');
-computador = 'pedra'
+let opcoes = ['pedra', 'papel', 'tesoura']
+
+function escolhaComputador(array){
+  return array[Math.floor(Math.random()*array.length)]
+}
+computador = escolhaComputador(opcoes)
 
 escolha_usuario = document.getElementById('escolha');
 escolha_usuario.innerHTML = escolha;
@@ -12,7 +17,6 @@ if (escolha == computador){
 } else{
   veredito = 'você perdeu!'
 }
-
 
 resultado = document.getElementById('resultado')
 resultado.innerHTML = `O computador jogou ${computador}. Portanto ${veredito}`
