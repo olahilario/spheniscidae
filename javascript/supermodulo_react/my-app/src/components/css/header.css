@@ -1,0 +1,18 @@
+header{
+    background-color: #6D86A6;
+    display: flex;
+    justify-content: center;
+
+}
+
+header a{
+    color: #202020;
+}
+
+header li{
+    display: inline-block;
+    padding: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: normal;
+
+}
