@@ -1,0 +1,22 @@
+nav{
+  margin-top: -20px;
+}
+
+ul{
+  display: flex;
+  justify-content: space-evenly;
+  position: sticky;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 1.5em;
+  list-style-type: armenian;
+  color: #2D7337;
+  background-color: hsla(61, 75%, 79%);
+  padding: 5vh;
+}
+
+a:link, :visited{
+  text-decoration: none;
+  color: #2D7337;
+}
+
