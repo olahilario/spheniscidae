@@ -33,7 +33,7 @@ function addTask(){
 
 
 
-    // upbtn.addEventListener('click', getIndex);
+    upbtn.addEventListener('click', getIndex);
     // upbtn.addEventListener('click', moveUp);
 
   }
@@ -53,22 +53,20 @@ function checkClick(e){
   e.target.parentElement.children[1].style.textDecoration === 'line-through' ? 
   e.target.parentElement.children[1].style.textDecoration = 'none':
   e.target.parentElement.children[1].style.textDecoration = 'line-through';
+  e.target.parentElement.children[0].checked ? e.target.parentElement.children[0].checked = false :
+                                               e.target.parentElement.children[0].checked = true
 }
 
-// const getIndex = (e) => {
-//   const target_element = e.target;
-//   const parent_target = target_element.parentNode;
-//   const index_element = [].indexOf.call(parent_target.children, target_element);
-//   console.log(index_element);
-  
-//   return index_element;
-// }
 
-// function moveUp(e){
-//   const newtasklist = [...task_list];
-//   [newtasklist[e.getIndex + 1], newtasklist[e.getIndex]] = [newtasklist[e.getIndex], newtasklist[e.getIndex + 1]]
-//   console.log(newtasklist)
-// }
+
+const getIndex = (e) => {
+  const target = e.target
+  const parent = target.parentElement
+  const lista = parent.parentElement
+  const elemento_usuario = parent.children[1].textContent
+  console.log(elemento_usuario)
+
+}
 
 
 
