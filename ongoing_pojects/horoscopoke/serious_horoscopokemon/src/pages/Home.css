@@ -1,30 +1,30 @@
-h1{
+#title{
   font-family: monospace;
   font-size: 50px;
   font-weight: lighter;
   color: #F24405;
-  text-align: right;
-  margin-right: 5vw;
-  margin-top: 18vh;
-  position: sticky;
+  text-align: left;
+  margin-top: 7vh;
 }
 
 #container-home{
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
+  justify-content: space-evenly;
+  /* overflow: -moz-hidden-unscrollable; */
 }
 
 #div-form{
   border: #6DCCF2 5px double;
   border-radius: 25px;
   width: 40vw;
-  height: 40vh;
+  height: 45vh;
   margin-top: 5vh;
   background-image: url(/src/assets/div_background.jpg);
   background-position: center;
   background-size: cover;
   mix-blend-mode: hue;
-  overflow: hidden;
+  overflow: hidden
 
 }
 
@@ -32,11 +32,12 @@ h1{
   display: grid;
   grid-template-columns: 0.9fr 0.5fr;
   overflow: hidden;
+  padding: 10px 10px;
 }
 
 .form label{
   display: inline;
-  color: #F24405;;
+  color: #F24405;
   font-family: monospace;
   font-size: 25px;
   font-weight: bold;
@@ -54,11 +55,17 @@ h1{
   font-family: monospace;
   font-weight: bolder;
   font-size: 25px;
-  color: #F24405;
+  color: #6c0094;
   margin: auto;
   margin-right: 50px;
   width: 50px;
   cursor: crosshair;
+}
+
+input::-webkit-inner-spin-button {
+  cursor: crosshair;
+  mix-blend-mode: exclusion;
+  touch-action: double-tap-zoom;
 }
 
 #tags{
@@ -66,10 +73,21 @@ h1{
   font-family: monospace;
   font-weight: bolder;
   font-size: 25px;
-  color: #F24405;
+  color: #6c0094;
   }
 
 ::placeholder{
-    color: hwb(285 0% 64%);
+    color: #45005c;
     font-weight: bolder;
 }
+
+#profecy{
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: lighter;
+  color: #45005c;
+  text-align: left;
+  margin-top: 0vh;
+  white-space: nowrap;
+}
+

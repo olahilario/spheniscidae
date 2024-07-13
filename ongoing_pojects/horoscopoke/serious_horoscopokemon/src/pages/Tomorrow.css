@@ -1,29 +1,86 @@
-#body-tomorrow{
-  background-image: url(/src/assets/space_pokeball.webp);
-  min-height: 100vh;
-  background-size: cover;
-  
+.div-grid{
+  /* background-color: aquamarine; */
+  border: none
 }
 
-h1{
+#div-title{
+  /* background-color: aquamarine; */
+  border: none
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.title{
   font-family: monospace;
   font-size: 50px;
   font-weight: lighter;
   color: #F24405;
   text-align: left;
-  margin-left: 5vw;
-  margin-top: 25vh;
-  position: sticky;
+  margin-top: 7vh;
 }
 
+#container-tomorrow{
+  display: grid;
+  grid-template-columns: 25vw auto auto;
+  grid-template-rows: 7vw auto auto;
+  column-gap: 20px;
+  row-gap: 20px;
+}
 
-#container-tomorrow h3{
+#div-desire-path{
+  /* background-color: aquamarine; */
+  border: none;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  column-gap: 50px;
+}
+
+#desire{
   font-family: monospace;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: lighter;
-  color:aliceblue;
-  text-align: right;
-  margin-right: 5vw;
-  margin-left: 60vw;
-  margin-top: 33vh;
+  height: 8vh;
+  width: 25vw;
+  color: #F24405;
+  padding: 10px;
+}
+
+#path-desire{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: lighter;
+  height: 17vh;
+  width: 30vw;
+  color: #F24405;
+}
+
+#add-btn{
+  background-color: #F0F2A2;
+  border: none;
+  border-radius: 15px;
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #F24405;
+  padding: 10px;
+  
+}
+
+#div-msg{
+  grid-row-start: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#msg-tomorrow{
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #F24405;
 }

@@ -1,8 +1,8 @@
-.container-about{
+#container-about{
   margin-top: -8vh;
 }
 
-h1{
+#about-h1{
   font-family: monospace;
   font-size: 50px;
   font-weight: lighter;
@@ -11,13 +11,17 @@ h1{
   margin-left: 5vw;
 }
 
-.container-about h3{
+#about-h3{
   font-family: monospace;
   font-size: 25px;
   font-weight: lighter;
   color:#274065;
   text-align: right;
   margin-right: 5vw;
-  margin-left: 40vw;
+  margin-left: 20vw;
   margin-top: 13vh;
+}
+
+#about-h3 strong{
+  font-family: monospace;
 }
