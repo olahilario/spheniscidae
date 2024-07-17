@@ -9,7 +9,7 @@
 }
 
 .titulo:hover{
-  text-align: right;
+  opacity: 0;
 }
 
 .container_about{
