@@ -1,0 +1,32 @@
+
+.container_clock{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  min-height: 70vh;
+  align-items: center;
+}
+
+.title_today{
+  grid-column-start: 1;
+  grid-row-start: 1;
+  font-family: monospace;
+  font-size: 50px;
+  font-weight: lighter;
+  color: #F24405;
+  margin-left: 5vw;
+  margin-top: -8vh;
+
+}
+
+
+.h3_today{
+  grid-column-start: 1;
+  grid-row-start: 2;
+  font-family: monospace;
+  font-size: 70px;
+  font-weight: lighter;
+  color:#274065;
+  text-align: center;
+  margin-top: -40vh;
+}

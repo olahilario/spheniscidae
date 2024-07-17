@@ -2,15 +2,16 @@ import React, {useState, useContext} from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import RandomBar from './components/RandomBar.jsx'
+import { SearchProvider } from './contexts/searchContext.jsx'
 
-import './App.css'
+import styles from './App.module.css'
 
 
 function App() {
 
   
   return (
-    <div id='container-app'>
+    <div className={styles.container_app}>
 
       <Navbar />
       <RandomBar />
@@ -21,4 +22,11 @@ function App() {
   )
 }
 
-export default App
+function AppWrapper() {
+  return (
+    <SearchProvider>
+      <App />
+    </SearchProvider>
+  );
+}
+export default AppWrapper;

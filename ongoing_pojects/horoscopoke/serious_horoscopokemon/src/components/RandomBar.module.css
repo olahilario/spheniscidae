@@ -1,0 +1,59 @@
+.search_bar{
+  display: grid;
+  grid-template-columns: 0.05fr 0.8fr 0.1fr;
+  justify-content: space-evenly;
+
+}
+
+.lupa{
+  max-height: 7vh;
+}
+
+.lupa:hover{
+  rotate: 180deg;
+}
+
+.search_bar input{
+  font-size: large;
+  font-family: monospace;
+  background-color: #B6E1F2;
+  border-radius: 10px;
+  border: 3px solid #F24405;
+  color: #F24405;
+  font-weight: bolder;
+  padding: 10px 10px;
+}
+
+.search_bar input:focus{
+  outline: none;
+  border: 3px solid #2D7337;
+
+}
+
+.search_bar button{
+  background-color: #F0F2A2;
+  border: none;
+  border-radius: 25px;
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #F24405;
+}
+
+.search_bar button:hover{
+  scale: 120%;
+}
+
+.paragrafo_teste{
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: lighter;
+  color: hwb(28 3% 9%);
+  position: fixed;
+  margin-top: 70vh;
+  margin-left: 50vw;
+}
+
+.randombar:hover{
+  background-color: hsla(197, 70%, 83%, 0.7);
+}

@@ -1,0 +1,17 @@
+*{
+  cursor: crosshair;
+}
+
+body{
+  background-image: url('./assets/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  margin: 0;
+}
+.container_app{
+  display: grid;
+  grid-template-rows: 0.2fr 0.8fr;
+}

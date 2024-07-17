@@ -1,14 +1,13 @@
 import React, {useState, useContext} from 'react'
-import './Today.css'
+import styles from './Today.module.css'
 
 function Today() {
   return (
-    <div>
-      <h1>.Today</h1>
-
-      <h3>Relógio com váááários dígitos(new Date javascript object). Os bilionéssimos de segundo definem a consulta ao banco de dados</h3>
+    <div className={styles.container_clock}>
+      <p className={styles.title_today}>.Today</p>
+      <p className={styles.h3_today}>07:48:15:47:357</p>
     </div>
-  )
+)
 }
 
 export default Today

@@ -1,0 +1,130 @@
+.h1_home{
+  font-family: monospace;
+  font-size: 50px;
+  font-weight: lighter;
+  color: #F24405;
+  text-align: left;
+  margin-left: 5vw;
+  margin-top: 15vh;
+  position: sticky;
+}
+
+
+h3{
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: lighter;
+  color:#274065;
+  text-align: right;
+  margin-right: 5vw;
+  margin-left: 65vw;
+  margin-top: -3vh;
+}
+
+.container_home{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  justify-content: space-evenly;
+  /* /* overflow: -moz-hidden-unscrollable; */
+}
+
+.div_form{
+  border: #6DCCF2 5px double;
+  border-radius: 25px;
+  width: 40vw;
+  height: 45vh;
+  margin-top: 3vh;
+  background-image: url(/src/assets/div_background.jpg);
+  background-position: center;
+  background-size: cover;
+  mix-blend-mode: hue;
+  overflow: hidden
+}
+
+.div_form:hover{
+  scale: 110%;
+  animation: ease-in-out;
+}
+
+.form_home{
+  display: grid;
+  grid-template-columns: 0.9fr 0.5fr;
+  overflow: hidden;
+  padding: 10px 10px;
+}
+
+.label_home{
+  display: inline;
+  color: #F24405;
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 3vh;
+  padding-bottom: 5vh;
+}
+
+.label_home:hover{
+  -webkit-text-fill-color: #45005c;
+  scale: 108%;
+}
+
+.label_home span{
+  margin-left: 2vw;
+  background-color: aquamarine;
+}
+
+.input_form_home{
+  background-color: aquamarine;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 25px;
+  color: #6c0094;
+  margin: auto;
+  margin-right: 50px;
+  width: 50px;
+  cursor: crosshair;
+}
+
+.input_form_home:hover{
+  -webkit-text-fill-color: #F24405;
+  scale: 115%;
+
+}
+
+.tags{
+  background-color: aquamarine;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 25px;
+  color: #6c0094;
+  }
+
+.tags:hover{
+  -webkit-text-fill-color: #F24405;
+  scale: 105%;
+
+}
+
+.profecy{
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: lighter;
+    color: #45005c;
+    text-align: left;
+    margin-top: -2vh;
+    white-space: nowrap;
+  }
+
+input::-webkit-inner-spin-button {
+  cursor: crosshair;
+  mix-blend-mode: exclusion;
+  touch-action: double-tap-zoom;
+}
+
+
+
+::placeholder{
+    color: #45005c;
+    font-weight: bolder;
+}
+

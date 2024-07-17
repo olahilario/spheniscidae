@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react'
-import { Outlet } from 'react-router-dom'
-import './Home.css'
+import React, { useState } from 'react'
+import styles from './Home.module.css'
 
 function Home() {
 
@@ -10,7 +9,6 @@ function Home() {
 
   const handleBaths = (e) =>{
     setBaths(e.target.value)
-    console.log(randomvalue)
   }
 
   const handleEggs = (e) =>{
@@ -24,24 +22,24 @@ function Home() {
 
   return (
     <>
-      <div id='container-home'>
-      <h1 id='title'>.horoscopokemón</h1>
-      <div id='div-form'>
-        <form action="#" method='POST' className='form'>
-          <label htmlFor="bath-number"><span>How many baths this current year?</span></label>
-          <input type="number" name="bath-number" id="bath-number" placeholder='0'onChange={handleBaths}/>
+      <div className={styles.container_home}>
+      <h1 className={styles.h1_home}>.horoscopokemón</h1>
+      <div className={styles.div_form}>
+        <form action="#" method='POST' className={styles.form_home}>
+          <label htmlFor="bath-number" className={styles.label_home}><span>How many baths this current year?</span></label>
+          <input type="number" name="bath-number" className={styles.input_form_home} placeholder='0'onChange={handleBaths} />
 
-          <label htmlFor="eggs"><span>How many eggs last night?</span></label>
-          <input type="number" name="eggs" id="eggs" placeholder='0' onChange={handleEggs}/>
+          <label htmlFor="eggs" className={styles.label_home}><span>How many eggs last night?</span></label>
+          <input type="number" name="eggs" className={styles.input_form_home} placeholder='0' onChange={handleEggs}/>
 
-          <label htmlFor="tags"><span>Free tags inside your head!</span></label>
-          <textarea name="tags" id="tags" placeholder='pizza eggs tags baths pizza poke' onChange={handleTags}></textarea>
+          <label htmlFor="tags" className={styles.label_home}><span>Free tags inside your head!</span></label>
+          <textarea name="tags" className={styles.tags} placeholder='pizza eggs tags baths pizza poke' onChange={handleTags}></textarea>
         </form>
 
         </div>
 
       </div>
-      <p id='profecy'>{baths} baths, {eggs} eggs and {tags}</p>
+      <p className={styles.profecy}>{baths} baths, {eggs} eggs and {tags}</p>
     </>
   )
 }

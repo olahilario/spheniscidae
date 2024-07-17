@@ -1,15 +1,12 @@
-import React, {useState, createContext} from 'react'
-import './RandomBar.css'
+import React, {useState, createContext, useContext} from 'react'
+import { SearchContext } from '../contexts/searchContext'
+import styles from './RandomBar.module.css'
 
 
 
 
-function RandomBar() {
-
-  const [anything, setAnything] = useState()
-  const [notanything, setNotAnything] = useState()
-
-  // const values = [anything, notanything]
+function RandomBar() { 
+  const { anything, setAnything, notanything, setNotAnything } = useContext(SearchContext)
 
 
   const handleAnything = (e)=>{
@@ -20,11 +17,12 @@ function RandomBar() {
 
   return (
     <div>
-       <div id='search-bar'>
-        <img src='/src/assets/search_pokeball_icon.png' alt="search icon" />
-        <input type="text" id='randombar' onChange={handleAnything} placeholder="Type anything you want. It doesn't matter, because your horoscopoke does! Simple rule: Space controls what is true or false! ᕙ(⇀‸↼‶)ᕗ"/>
+       <div className={styles.search_bar}>
+        <img src='/src/assets/search_pokeball_icon.png' className={styles.lupa} alt="search icon" />
+        <input type="text" id='randombar' className={styles.randombar} onChange={handleAnything} placeholder="Type anything you want. It doesn't matter, because your horoscopoke does! Simple rule: Space controls what is true or false! ᕙ(⇀‸↼‶)ᕗ"/>
         <button>GO!</button>
       </div>
+      <p className={styles.paragrafo_teste}>{notanything}</p>
 
     </div>
   )
