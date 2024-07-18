@@ -1,0 +1,92 @@
+
+
+.container_clock{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  min-height: 70vh;
+  align-items: center;
+}
+
+.title_today{
+  grid-column-start: 1;
+  grid-row-start: 1;
+  font-family: monospace;
+  font-size: 50px;
+  font-weight: lighter;
+  color: #F24405;
+  margin-left: 5vw;
+  margin-top: -20vh;
+}
+
+
+.h3_today{
+  grid-column-start: 2;
+  grid-row-start: 2;
+  font-family: monospace;
+  font-size: 70px;
+  font-weight: lighter;
+  color:#274065;
+  /* text-align: center; */
+  margin-top: -50vh;
+  backdrop-filter: blur(5px);
+  mix-blend-mode: hard-light;
+}
+
+.msg{
+  grid-column-start: 2;
+  grid-row-start: 3;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: lighter;
+  color:#274065;
+  margin-left: 4vw;
+  margin-top: -25vh;
+  padding: 10px;
+  mix-blend-mode: hard-light;
+}
+
+.msg2{
+  grid-column-start: 1;
+  grid-row-start: 1;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color:#274065;
+  margin-top: -8vh;
+  margin-left: 11vw;
+  padding: 10px;
+  mix-blend-mode: hard-light;
+}
+
+.msg3{
+  grid-column-start: 2;
+  grid-row-start: 1;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color:#F24405;
+  margin-bottom: -40vh;
+  margin-left: 13vw;
+  padding: 10px;
+  mix-blend-mode: hard-light;
+}
+
+.botao{
+  grid-column-start: 2;
+  background-color: crimson;
+  color: azure;
+  height: 7vh;
+  width: 5vw;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: large;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+
+.botao:hover{
+  background-color: chartreuse;
+  color: deeppink;
+}
