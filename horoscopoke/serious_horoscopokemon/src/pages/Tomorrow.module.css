@@ -18,14 +18,16 @@
   font-weight: lighter;
   color: #F24405;
   margin-left: 10vh;
-  margin-top: 15vh;
+  /* margin-top: 15vh; */
 }
 
 .container_tomorrow{
   display: grid;
   grid-template-columns: 25vw 25vw 25vw 25vw;
-  grid-template-rows: 12vw auto auto;
+  grid-template-rows: 7vw auto auto auto;
   row-gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .div_desire_path{
@@ -33,19 +35,19 @@
   border: none;
   grid-column-start: 1;
   grid-column-end: 5;
-  grid-row-start: 2;
+  grid-row-start: 1;
   grid-row-end: 4;
   column-gap: 50px;
-  margin-top: -2vh;
+  /* margin-top: -20vh; */
 }
 
 .desire{
-  grid-row-start: 2;
+  grid-row-start: 3;
   grid-row-end: 4;
   font-family: monospace;
   font-size: 20px;
   font-weight: 400;
-  min-height: 8vh;
+  min-height: 7vh;
   min-width: 23vw;
   color: #F24405;
   margin-left: 2vw;
@@ -58,29 +60,40 @@
 .add_btn{
   background-color: #F0F2A2;
   border: none;
+  min-width: 4vw;
+  min-height: 6vh;
   border-radius: 15px;
   font-family: monospace;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bolder;
   color: #F24405;
-  padding: 10px;
-  margin-top: 15vh;
+  padding: 5px;
+  /* margin-top: 15vh; */
   
 }
 
+.add_btn:hover{
+  background-color: chartreuse;
+  color: deeppink;
+  cursor: help;
+}
+
 .path_desire{
+  float: center;
   grid-column-start: 2;
   grid-column-end: 4;
   font-family: monospace;
   font-size: 20px;
   font-weight: 400;
-  height: 17vh;
+  height: 35vh;
   min-width: 30vw;
   border-radius: 15px;
   color: #F24405;
+  margin-top: 10vh;
   margin-left: 4vw;
-  margin-top: 5vh;
   margin-left: 5vw;
+  border: #F0F2A2;
+
 
 }
 
@@ -96,4 +109,6 @@
   font-weight: 600;
   color: #F24405;
   line-break: anywhere;
+  margin-top: -10vh;
+  /* margin-left: 15vw; */
 }

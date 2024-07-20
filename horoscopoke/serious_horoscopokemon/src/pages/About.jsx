@@ -7,7 +7,7 @@ function About() {
     <>
       <h1 className={styles.titulo}>.wtf is horoscopokemón?</h1>
       <div className={styles.div_login}>
-        <input type="text" className={styles.input_login} placeholder='Login' />
+        <input type="text" className={styles.input_login} placeholder='login' />
         <input type="password" className= {styles.input_login} placeholder='password' />
         <button className={styles.botao_login}>ENTER</button>
       </div>

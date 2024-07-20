@@ -13,11 +13,11 @@ function Tomorrow() {
   return (
       <div className={styles.container_tomorrow}>
         <div className={styles.div_title}>
-          <h1 className={styles.title}>Tomorrow</h1>
+          <h1 className={styles.title}>.Tomorrow</h1>
         </div>
         <div className={styles.div_desire_path}>
             <input type="text" className={styles.desire} placeholder='Tell me your current desire!' />
-            <button className={styles.add_btn}>Add</button>
+            <button className={styles.add_btn}>_patch</button>
             <textarea name="path" className={styles.path_desire} placeholder='What you gonna do!' value={`What you gonna do: ${notanything}`}></textarea>
         </div>
 
