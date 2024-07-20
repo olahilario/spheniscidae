@@ -22,7 +22,6 @@ function RandomBar() {
         <input type="text" id='randombar' className={styles.randombar} onChange={handleAnything} placeholder="Type anything you want. It doesn't matter, because your horoscopoke does! Simple rule: Space controls what is true or false! ᕙ(⇀‸↼‶)ᕗ"/>
         <button>GO!</button>
       </div>
-      <p className={styles.paragrafo_teste}>{notanything}</p>
 
     </div>
   )

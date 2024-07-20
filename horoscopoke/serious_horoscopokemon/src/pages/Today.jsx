@@ -4,7 +4,7 @@ import styles from './Today.module.css'
 function Today() {
 
   const [time, setTime] = useState(new Date());
-  const [lapso, setLapso] = useState(1)
+  const [lapso, setLapso] = useState(1);
 
   useEffect(()=> {
     let interval = setInterval(()=>{
@@ -25,6 +25,7 @@ function Today() {
   }
 
   function changeTime(){
+    setTime(new Date())
     setLapso(500)
   }
 
@@ -57,14 +58,16 @@ function Today() {
 
 
   return (
+    <>
       <div className={styles.container_clock}>
         <span className={styles.title_today} onClick={stopTime}>.{time.getTime()}</span>
         <span className={styles.msg2}>Horário universal!</span>
         <span className={styles.msg3}>Horário humano!</span>
         <span className={styles.h3_today} onClick={changeTime}>{formatTime()}</span>
         <span className={styles.msg}>"Choose" the right time to click wisely!</span>
-        <button className={styles.botao} onDoubleClick={reStartTime}>BUTTON</button>
+        <button className={styles.botao} onClick={reStartTime}>BUTTON</button>
       </div>
+    </>
 )
 }
 

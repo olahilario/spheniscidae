@@ -5,7 +5,7 @@ function Home() {
 
   const [baths, setBaths] = useState();
   const [eggs, setEggs] = useState();
-  const [tags, setTags] = useState()
+  const [tags, setTags] = useState();
 
   const handleBaths = (e) =>{
     setBaths(e.target.value)

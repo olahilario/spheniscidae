@@ -15,33 +15,32 @@
   font-size: 50px;
   font-weight: lighter;
   color: #F24405;
-  margin-left: 5vw;
   margin-top: -20vh;
+  cursor: no-drop;
 }
 
 
 .h3_today{
-  grid-column-start: 2;
+  grid-column-start: 3;
   grid-row-start: 2;
   font-family: monospace;
-  font-size: 70px;
+  font-size: 50px;
   font-weight: lighter;
   color:#274065;
-  /* text-align: center; */
-  margin-top: -50vh;
+  margin-top: -11vh;
   backdrop-filter: blur(5px);
   mix-blend-mode: hard-light;
+  cursor: wait;
 }
 
 .msg{
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-row-start: 3;
   font-family: monospace;
   font-size: 20px;
   font-weight: lighter;
   color:#274065;
-  margin-left: 4vw;
-  margin-top: -25vh;
+  margin-top: -22vh;
   padding: 10px;
   mix-blend-mode: hard-light;
 }
@@ -54,39 +53,36 @@
   font-weight: bold;
   color:#274065;
   margin-top: -8vh;
-  margin-left: 11vw;
-  padding: 10px;
   mix-blend-mode: hard-light;
 }
 
 .msg3{
-  grid-column-start: 2;
-  grid-row-start: 1;
+  grid-column-start: 3;
+  grid-row-start: 2;
   font-family: monospace;
   font-size: 20px;
   font-weight: bold;
   color:#F24405;
-  margin-bottom: -40vh;
-  margin-left: 13vw;
-  padding: 10px;
+  text-align: right;
   mix-blend-mode: hard-light;
 }
 
 .botao{
-  grid-column-start: 2;
   background-color: crimson;
   color: azure;
   height: 7vh;
-  width: 5vw;
+  width: 4vw;
   font-family: monospace;
   font-weight: bolder;
-  font-size: large;
-  text-align: center;
+  font-size: small;
   border: none;
   border-radius: 5px;
+  position: absolute;
+  cursor: not-allowed;
 }
 
 .botao:hover{
   background-color: chartreuse;
   color: deeppink;
+  font-size: large;
 }

@@ -9,6 +9,10 @@
   position: sticky;
 }
 
+.h1_home:hover{
+  color: #45005c;
+}
+
 
 h3{
   font-family: monospace;
@@ -43,7 +47,7 @@ h3{
 
 .div_form:hover{
   scale: 110%;
-  animation: ease-in-out;
+  animation: 5s ease;
 }
 
 .form_home{

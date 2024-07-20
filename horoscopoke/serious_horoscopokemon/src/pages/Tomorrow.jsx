@@ -6,9 +6,9 @@ import styles from './Tomorrow.module.css'
 
 function Tomorrow() {
 
-  const {anything, setAnything, notanything, setNotAnything} = useContext(SearchContext)
+  const {anything, setAnything, notanything, setNotAnything} = useContext(SearchContext);
 
-  let msg = document.getElementById('msg-tomorrow')
+  let msg = document.getElementById('msg-tomorrow');
 
   return (
       <div className={styles.container_tomorrow}>
@@ -18,12 +18,12 @@ function Tomorrow() {
         <div className={styles.div_desire_path}>
             <input type="text" className={styles.desire} placeholder='Tell me your current desire!' />
             <button className={styles.add_btn}>Add</button>
-            <textarea name="path" className={styles.path_desire} placeholder='What you gonna do!'></textarea>
+            <textarea name="path" className={styles.path_desire} placeholder='What you gonna do!' value={`What you gonna do: ${notanything}`}></textarea>
         </div>
 
         <div className={styles.div_msg}>
 
-          <p className={styles.msg_tomorrow}>So far this is an empty list. <br /> For each desire, a very strange <br />path for reach it! {notanything}</p>
+          <p className={styles.msg_tomorrow}>So far this is an empty list. <br /> For each desire, a very strange <br />path for reach it! {anything}</p>
         </div>
         
 
