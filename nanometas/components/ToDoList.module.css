@@ -1,0 +1,108 @@
+/* GLOBAL */
+
+*{
+  margin:0;
+}
+
+.global{
+  background-color: hwb(210 7% 89%);
+}
+
+h1{
+  color: #F7E41E;
+  font-family: monospace;
+  font-size: 50px;
+}
+
+.doing_stuff{
+  color: #F7E41E;
+  font-family: monospace;
+  font-size: 50px;
+  margin-bottom: 2vh;
+  margin-top: 3vh;
+}
+
+/* LAYOUT AMPLO */
+
+.global_container{
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 3;
+  min-height: 100vh;
+  margin-left: 100px;
+  margin-right: 100px;
+
+}
+
+.input_display{
+  grid-column: 1;
+  grid-template-rows: 3;
+  max-width: fit-content;
+  min-height: fit-content;
+  margin-top: 10vh;
+}
+
+.input_display input{
+  grid-row: 2;
+  font-family: monospace;
+  font-size: 22px;;
+  min-height: 5vh;
+  border-radius: 5px;
+}
+
+.input_display button{
+  grid-row: 3;
+  font-size: 20px;
+  border-radius: 5px;
+  min-height: 4vh;
+  margin: 10px;
+  margin-top: 35px;
+}
+
+/* LISTA DINAMICA */
+
+.tasks{
+  grid-column: 2;
+  grid-row: span 3;
+  text-align: right;
+  margin-top: 7vh;
+  font-family: monospace;
+  color: hsla(55, 93%, 54%, 0.753);
+}
+
+.div_task{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+
+.task_list{
+  display: flex;
+  padding: 10px;
+  font-size: 30px;
+  justify-content: right;
+  padding: 1vh;
+}
+
+.list_button {
+  font-size: 50px;
+  height: 30px;
+  margin-right: 7px;
+  border-radius: 5px;
+}
+
+/* RODAPÉ */
+
+.footer{
+  grid-column: 2;
+  /* grid-row: 4; */
+  position: bottom;
+}
+
+.text_footer{
+  text-align: right;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 100px;
+}
