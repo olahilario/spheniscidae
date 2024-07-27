@@ -1,69 +1,62 @@
-
+.container_global{
+  background-image: url(../assets/background_d.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  height: 76vh;
+}
 
 .container_clock{
-  display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
-  grid-template-rows: 0.5fr 0.5fr;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: flex-start;
   min-height: 70vh;
-  align-items: center;
 }
 
 .title_today{
-  grid-column-start: 1;
-  grid-row-start: 1;
   font-family: monospace;
   font-size: 50px;
   font-weight: lighter;
   color: #F24405;
-  margin-top: -20vh;
   cursor: no-drop;
 }
 
 
 .h3_today{
-  grid-column-start: 3;
-  grid-row-start: 2;
   font-family: monospace;
   font-size: 50px;
   font-weight: lighter;
   color:#274065;
-  margin-top: -11vh;
-  backdrop-filter: blur(5px);
   mix-blend-mode: hard-light;
   cursor: wait;
+  margin-right: 2vw;
 }
 
 .msg{
-  grid-column-start: 1;
-  grid-row-start: 3;
   font-family: monospace;
   font-size: 20px;
   font-weight: lighter;
   color:#274065;
-  margin-top: -22vh;
   padding: 10px;
   mix-blend-mode: hard-light;
 }
 
 .msg2{
-  grid-column-start: 1;
-  grid-row-start: 1;
   font-family: monospace;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color:#274065;
-  margin-top: -8vh;
   mix-blend-mode: hard-light;
 }
 
 .msg3{
-  grid-column-start: 3;
-  grid-row-start: 2;
   font-family: monospace;
   font-size: 20px;
   font-weight: bold;
   color:#F24405;
-  text-align: right;
   mix-blend-mode: hard-light;
 }
 
@@ -71,13 +64,12 @@
   background-color: crimson;
   color: azure;
   height: 7vh;
-  width: 4vw;
+  width: 7vw;
   font-family: monospace;
   font-weight: bolder;
   font-size: small;
   border: none;
   border-radius: 5px;
-  position: absolute;
   cursor: not-allowed;
 }
 

@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react'
 import styles from './Yersterday.module.css'
+import TheDog from '../components/TheDog';
 
 function Yersterday() {
 
@@ -27,6 +28,7 @@ function Yersterday() {
 
   function stop(){
     setIsTicking(false)
+    console.log(elapsed)
   }
 
   function reset(){
@@ -37,8 +39,8 @@ function Yersterday() {
   function format(){
     let hours = padZero(Math.floor((elapsed/(1000*60*60))));
     let minutes = padZero(Math.floor(elapsed/(1000*60) % 60));
-    let seconds = padZero(Math.floor(30 - (elapsed/1000) % 60));
-    let milliseconds = padZeros(Math.abs(999 - (elapsed % 1000)));
+    let seconds = padZero(Math.floor(42 - (elapsed/1000) % 60));
+    let milliseconds = padZeros(Math.abs(420 - (elapsed % 1000)));
 
     return `${hours}:${minutes}:${seconds}:${milliseconds}`;
   }
@@ -57,16 +59,23 @@ function Yersterday() {
   }}
 
   return (
-    <div>
-      <h1 className={styles.h1_yersterday}>.Yersterday</h1>
+    <div className={styles.global_container}>
+      <div>
+        <h1 className={styles.h1_yersterday}>.Yersterday</h1>
 
-      <div className={styles.clock_container}>
-        <span className={styles.display}>{format()}</span>
-        <div className={styles.div_buttons}>
-          <button className={styles.btn_start}onClick={start}>start</button>
-          <button className={styles.btn_stop}onClick={stop}>stop</button>
-          <button className={styles.btn_reset}onClick={reset}>reset</button>
+        <div className={styles.clock_container}>
+          <span className={styles.display}>{format()}</span>
+          <div className={styles.div_buttons}>
+            <button className={styles.btn_start}onClick={start}>start</button>
+            <button className={styles.btn_stop}onClick={stop}>stop</button>
+            <button className={styles.btn_reset}onClick={reset}>reset</button>
+          </div>
         </div>
+
+        <TheDog 
+        elapsed = {elapsed}
+        />
+
       </div>
     </div>
   )

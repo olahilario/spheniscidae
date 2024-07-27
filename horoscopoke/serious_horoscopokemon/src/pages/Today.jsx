@@ -58,16 +58,22 @@ function Today() {
 
 
   return (
-    <>
+    <div className={styles.container_global}>
       <div className={styles.container_clock}>
-        <span className={styles.title_today} onClick={stopTime}>.{time.getTime()}</span>
-        <span className={styles.msg2}>Horário universal!</span>
-        <span className={styles.msg3}>Horário humano!</span>
-        <span className={styles.h3_today} onClick={changeTime}>{formatTime()}</span>
-        <span className={styles.msg}>"Choose" the right time to click wisely!</span>
-        <button className={styles.botao} onClick={reStartTime}>BUTTON</button>
+        <div>
+          <span className={styles.msg2}>Horário universal!</span>
+          <span className={styles.title_today} onClick={stopTime}>.{time.getTime()}</span>
+        </div>
+        <div>
+          <span className={styles.h3_today} onClick={changeTime}>{formatTime()}</span>
+          <span className={styles.msg3}>Horário humano!</span>
+        </div>
       </div>
-    </>
+        <div>
+          <button className={styles.botao} onClick={reStartTime}>BUTTON</button>
+          <span className={styles.msg}>"Choose" the right time to click wisely!</span>
+        </div>
+    </div>
 )
 }
 

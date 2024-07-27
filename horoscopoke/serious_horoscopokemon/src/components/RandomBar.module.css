@@ -2,6 +2,14 @@
   display: grid;
   grid-template-columns: 0.05fr 0.8fr 0.1fr;
   justify-content: space-evenly;
+  background-color: #4bb7f6;
+  background-image: url(../assets/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 2vh;
+  /* box-shadow: 25px 25px 50px 0 #4bb7f6 inset, -25px -25px 50px 0 #4bb7f6 inset;  */
 
 }
 

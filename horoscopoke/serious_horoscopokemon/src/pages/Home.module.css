@@ -1,3 +1,13 @@
+.container_home{
+    background-image: url(../assets/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    height: 76vh;
+  }
+
 .h1_home{
   font-family: monospace;
   font-size: 50px;
@@ -5,7 +15,7 @@
   color: #F24405;
   text-align: left;
   margin-left: 5vw;
-  margin-top: 15vh;
+  margin-top: 2 vh;
   position: sticky;
 }
 
@@ -115,8 +125,8 @@ h3{
     font-weight: lighter;
     color: #45005c;
     text-align: left;
-    margin-top: -2vh;
     white-space: nowrap;
+    margin-top: -8vh;
   }
 
 input::-webkit-inner-spin-button {

@@ -1,3 +1,26 @@
+/* body{
+  background-image: url('../assets/space_pokeball.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  margin: 0;
+} */
+
+.global_container{
+  background-image: url(../assets/background_v2.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  height: 76vh;
+  width: 100vw;
+  position: fixed;
+
+}
+
 .h1_yersterday{
   font-family: monospace;
   font-size: 50px;
@@ -6,24 +29,27 @@
   text-align: left;
   margin-left: 5vw;
   margin-top: 3vh;
+  margin-bottom: 3vh;
   position: sticky;
 }
 
 
 .clock_container{
-  display: grid;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
   grid-template-columns: 1fr;
   grid-template-rows: 0.5fr 0.5fr;
+
 
 }
 
 .display{
   font-family: monospace;
-  font-size: 6rem;
+  font-size: 3rem;
   color: cornflowerblue;
   mix-blend-mode: color-burn;
   justify-self: center;
-  padding-bottom: 4vh;
   
 }
 
@@ -34,7 +60,7 @@
 
 .btn_start{
   font-family: monospace;
-  font-size: 4rem;
+  font-size: 2rem;
   border: none;
   border-radius: 8px;
   background-color: hsl(0, 100%, 50%);
@@ -50,7 +76,7 @@
 
 .btn_stop{
   font-family: monospace;
-  font-size: 4rem;
+  font-size: 2rem;
   border: none;
   border-radius: 8px;
   background-color: hsl(128, 100%, 54%);
@@ -66,7 +92,7 @@
 
 .btn_reset{
   font-family: monospace;
-  font-size: 4rem;
+  font-size: 2rem;
   border: none;
   border-radius: 8px;
   background-color: hsl(325, 100%, 50%);

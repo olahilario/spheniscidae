@@ -7,8 +7,9 @@ import styles from './Tomorrow.module.css'
 function Tomorrow() {
 
   const {anything, setAnything, notanything, setNotAnything} = useContext(SearchContext);
-
   let msg = document.getElementById('msg-tomorrow');
+
+  
 
   return (
       <div className={styles.container_tomorrow}>

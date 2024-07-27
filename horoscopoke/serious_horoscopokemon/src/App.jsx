@@ -11,7 +11,9 @@ function App() {
 
   
   return (
-    <div className={styles.container_app}>
+    <>
+    
+    <div className={[styles.container_app, styles.main_bg]}>
 
       <Navbar />
       <RandomBar />
@@ -19,6 +21,7 @@ function App() {
       <Outlet />
 
     </div>
+    </>
   )
 }
 

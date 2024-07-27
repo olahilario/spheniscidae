@@ -1,11 +1,24 @@
+.container_global{
+  background-image: url(../assets/background_c.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  height: 76vh;
+  position: fixed;
+}
+
+
 .titulo{
   font-family: monospace;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: lighter;
-  color: #F24405;
+  color: #4A4873;
   text-align: left;
-  margin-left: 5vw;
-  margin-top: 15vh;
+  margin-left: 2vw;
+  margin-top: 10vh;
+  padding-bottom: 12vh;
 }
 
 .titulo:hover{
@@ -13,6 +26,8 @@
 }
 
 .container_about{
+  display: flex;
+  flex-direction: column;
   margin-top: -4vh;
 }
 
@@ -23,43 +38,55 @@
   color:#274065;
   text-align: right;
   margin-right: 5vw;
-  margin-left: 65vw;
-  margin-top:-25vh;
+  margin-left: 50vw;
+  margin-top:-28vh;
   text-decoration: dotted;
 }
 
-.styles.div_login{
-  display: grid;
+.div_login{
+  display: flex;
+  flex-direction: column;
+  max-width: 20vw;
 }
 
 .input_login{
   width: 6vw;
   height: 6vh;
-  margin-right: 20px;
   border-radius: 10px;
   border: none;
   mix-blend-mode: color-burn;
   font-size: 15px;
   font-family: monospace;
-  margin-top: 10vh;
-  text-align: center;
+  margin-left: 2vw;
 }
 .input_login:hover{
   cursor: none;
 }
 
 .botao_login{
-  background-color: #F24405;
+  background-color: #6CD9D9;
   border: none;
-  font-size: 50px;
+  font-size: 30px;
   font-family: monospace;
   border-radius: 7px;
   color: aliceblue;
   padding: 5px;
-  margin-left: 1vw;
+  max-width: fit-content;
+  margin-left: 2vw;
+
 }
 
 .botao_login:hover{
   scale: 20%;
-  background-color: black;
+  background-color: #4B8CA6;
+}
+
+.msg{
+  font-size: large;
+  padding: 5px;
+  font-size: x-large;
+  color: white;
+  display: flex;
+  margin-left: 2vw;
+  margin-top: 2vh;
 }
