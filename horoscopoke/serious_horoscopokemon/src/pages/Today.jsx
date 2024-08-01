@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import styles from './Today.module.css'
+import TheDog from '../components/TheDog';
 
 function Today() {
 
@@ -69,6 +70,7 @@ function Today() {
           <span className={styles.msg3}>Horário humano!</span>
         </div>
       </div>
+
         <div>
           <button className={styles.botao} onClick={reStartTime}>BUTTON</button>
           <span className={styles.msg}>"Choose" the right time to click wisely!</span>

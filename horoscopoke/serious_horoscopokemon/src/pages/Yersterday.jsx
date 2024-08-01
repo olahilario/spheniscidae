@@ -5,7 +5,7 @@ import TheDog from '../components/TheDog';
 function Yersterday() {
 
   const [isTicking, setIsTicking] = useState(false);
-  const [elapsed, setElapsed] = useState(0);
+  const [elapsed, setElapsed] = useState(420);
   const intervalRef = useRef(null);
   const startTimeFromRef = useRef(0);
 
@@ -39,8 +39,8 @@ function Yersterday() {
   function format(){
     let hours = padZero(Math.floor((elapsed/(1000*60*60))));
     let minutes = padZero(Math.floor(elapsed/(1000*60) % 60));
-    let seconds = padZero(Math.floor(42 - (elapsed/1000) % 60));
-    let milliseconds = padZeros(Math.abs(420 - (elapsed % 1000)));
+    let seconds = padZero(Math.floor(43 - (elapsed/1000) % 60));
+    let milliseconds = padZeros(Math.abs(840 - (elapsed % 1000)));
 
     return `${hours}:${minutes}:${seconds}:${milliseconds}`;
   }
@@ -74,6 +74,7 @@ function Yersterday() {
 
         <TheDog 
         elapsed = {elapsed}
+        isTicking = {false}
         />
 
       </div>

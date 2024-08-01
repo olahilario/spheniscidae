@@ -1,35 +1,37 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
-function TheDog({elapsed}) {
+function TheDog({ elapsed, isTicking }) {
 
-// fetch("https://dog.ceo/api/breeds/image/random/50")
-//   .then(response => {
-//     if (!response.ok){
-//       throw new Error("Deu ruim!");
-//     }
-//     return response.json();
-//   })
-//   .then(data => console.log(data.message))
-//   .catch(error => console.log(error))
+  const [userBreedNumber, setUserBreedNumber] = useState(0)
 
-  const fetchData = async ()=> {
+  const fetchBreeds = async ()=> {
     try{
-      const response = await fetch("https://dog.ceo/api/breeds/image/random/50");
-
+      const response = await fetch("https://dog.ceo/api/breeds/list/all");
       if (!response.ok){
         throw new Error ("Deu ruim aqui!")
+      }else{
+        const breeds = await response.json();
+        const breeds_list = Object.keys(breeds.message)
+        console.log(breeds_list)
+        setUserBreedNumber((Math.round(elapsed/breeds_list.length)) < 107 ? Math.round(elapsed/breeds_list.length) : 'chow');
+        console.log(userBreedNumber)
+        console.log(isTicking)
+        const breed = Object.keys(breeds.message)[userBreedNumber]
+        let randomBreedImageURL = `https://dog.ceo/api/breeds/${breed}/images/random`
+        console.log(randomBreedImageURL)
       }
-      const data = await response.json();
-      console.log(data.message[0])
     }
     catch(error){
       console.error(error);
     }
+    // return randomBreedImageURL
+    
   }
 
   useEffect(()=>{
-    fetchData()
-  },[elapsed])
+    fetchBreeds()
+    
+  },[isTicking])
 
   return (
     <div>
