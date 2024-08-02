@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import styles from './TheDog.module.css'
 
-function TheDog({ elapsed, isTicking }) {
+function TheDog({ elapsed, isTicking, changeDogImage }) {
 
   const [userBreedNumber, setUserBreedNumber] = useState(0)
+  const [dogBreedLink, setDogBreedLink] = useState('')
+  const [dogImageLink, setDogImageLink] = useState('')
 
   const fetchBreeds = async ()=> {
     try{
@@ -13,30 +16,47 @@ function TheDog({ elapsed, isTicking }) {
         const breeds = await response.json();
         const breeds_list = Object.keys(breeds.message)
         console.log(breeds_list)
-        setUserBreedNumber((Math.round(elapsed/breeds_list.length)) < 107 ? Math.round(elapsed/breeds_list.length) : 'chow');
+        setUserBreedNumber((Math.round(elapsed/breeds_list.length)) < 107 ? Math.round(elapsed/breeds_list.length) : 22);
         console.log(userBreedNumber)
         console.log(isTicking)
         const breed = Object.keys(breeds.message)[userBreedNumber]
-        let randomBreedImageURL = `https://dog.ceo/api/breeds/${breed}/images/random`
-        console.log(randomBreedImageURL)
+        console.log(breed)
+        setDogBreedLink(`https://dog.ceo/api/breed/${breed}/images/random`)
+        console.log(dogBreedLink)
       }
     }
     catch(error){
       console.error(error);
     }
-    // return randomBreedImageURL
-    
+    return dogBreedLink
   }
 
+  const fetchDogImageLink = async (link)=> {
+    try{
+      const response = await fetch(link);
+      if (!response.ok){
+        throw new Error ("Deu ruim aqui no image!")
+      }else{
+        console.log(response)
+        const dogImageLinkBase = await response.json()
+        setDogImageLink(dogImageLinkBase);
+        console.log(dogImageLink)
+      }
+    }
+    catch(error){
+      console.error(error);
+    }
+    return dogImageLink
+  }
   useEffect(()=>{
     fetchBreeds()
+    fetchDogImageLink(dogBreedLink)
     
-  },[isTicking])
+  },[changeDogImage])
 
   return (
     <div>
-      <p style={{fontSize: '3rem', color: 'blue'}}>{elapsed}</p>
-      <img src="" alt="" />
+      <img className={styles.dogimage} src={dogImageLink.message} alt="" />
     </div>
   )
 }

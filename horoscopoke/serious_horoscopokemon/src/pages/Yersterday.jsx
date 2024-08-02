@@ -6,6 +6,7 @@ function Yersterday() {
 
   const [isTicking, setIsTicking] = useState(false);
   const [elapsed, setElapsed] = useState(420);
+  const [changeDogImage, setChangeDogImage] = useState(true)
   const intervalRef = useRef(null);
   const startTimeFromRef = useRef(0);
 
@@ -28,6 +29,7 @@ function Yersterday() {
 
   function stop(){
     setIsTicking(false)
+    setChangeDogImage(isTicking && changeDogImage ? false : true)
     console.log(elapsed)
   }
 
@@ -60,7 +62,7 @@ function Yersterday() {
 
   return (
     <div className={styles.global_container}>
-      <div>
+      <div className={styles.container}>
         <h1 className={styles.h1_yersterday}>.Yersterday</h1>
 
         <div className={styles.clock_container}>
@@ -72,10 +74,14 @@ function Yersterday() {
           </div>
         </div>
 
+        <p className={styles.msg}>You were definitely like this in your past life!</p>
+      <div className={styles.dog_container}>
         <TheDog 
         elapsed = {elapsed}
-        isTicking = {false}
+        isTicking = {isTicking}
+        changeDogImage = {changeDogImage}
         />
+      </div>
 
       </div>
     </div>
