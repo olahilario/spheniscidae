@@ -1,4 +1,10 @@
+.dogdiv{
+
+}
+
 .dogimage{
+  background-size: cover;
   object-fit: cover;
   position: center;
+  border: 7px solid rgb(0, 255, 110);
 }

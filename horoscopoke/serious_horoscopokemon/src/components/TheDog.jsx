@@ -55,8 +55,8 @@ function TheDog({ elapsed, isTicking, changeDogImage }) {
   },[changeDogImage])
 
   return (
-    <div>
-      <img className={styles.dogimage} src={dogImageLink.message} alt="" />
+    <div className={styles.dogdiv}>
+      <img className={styles.dogimage} src={dogImageLink.message} alt="Your dog ancestor!" />
     </div>
   )
 }

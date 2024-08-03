@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import styles from './Home.module.css'
+import { SearchContext } from '../contexts/searchContext'
 
 function Home() {
 
-  const [baths, setBaths] = useState();
-  const [eggs, setEggs] = useState();
-  const [tags, setTags] = useState();
+  const {eggs, setEggs, baths, setBaths, tags, setTags} = useContext(SearchContext)
 
   const handleBaths = (e) =>{
     setBaths(e.target.value)

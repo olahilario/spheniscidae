@@ -13,7 +13,7 @@
   flex-direction: row-reverse;
   justify-content: space-around;
   align-items: flex-start;
-  min-height: 70vh;
+  min-height: 55vh;
 }
 
 .title_today{
@@ -71,10 +71,18 @@
   border: none;
   border-radius: 5px;
   cursor: not-allowed;
+  margin-top: 30vh;
 }
 
 .botao:hover{
   background-color: chartreuse;
   color: deeppink;
   font-size: large;
+}
+
+.food_card{
+  margin-top: -20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

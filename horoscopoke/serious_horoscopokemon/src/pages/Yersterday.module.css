@@ -101,8 +101,8 @@
 }
 
 .dog_container{
-  background-color: #00ccff;
-  height: 60vh;
+  /* background-color: #00ccff; */
+  height: 61.5vh;
   width: 70vh;
   overflow: hidden;
   grid-column: 2;

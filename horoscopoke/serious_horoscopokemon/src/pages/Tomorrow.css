@@ -5,7 +5,7 @@
 
 #div-title{
   /* background-color: aquamarine; */
-  border: none
+  border: none;
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 1;

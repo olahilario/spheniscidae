@@ -1,0 +1,17 @@
+.div_meal{
+  display: grid;
+}
+
+
+.image_food{
+  max-height: 200px;
+  object-fit: contain;
+  display: inline;
+}
+
+.text{
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: lighter;
+  color:#274065;
+}
