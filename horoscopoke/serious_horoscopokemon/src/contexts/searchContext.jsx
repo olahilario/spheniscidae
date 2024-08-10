@@ -6,7 +6,7 @@ const SearchContext = createContext(null);
 const SearchProvider = ({ children }) => {
     const [anything, setAnything] = useState('')
     const [notanything, setNotAnything] = useState('')
-    const [eggs, setEggs] = useState(0)
+    const [eggs, setEggs] = useState()
     const [baths, setBaths] = useState();
     const [tags, setTags] = useState();
 

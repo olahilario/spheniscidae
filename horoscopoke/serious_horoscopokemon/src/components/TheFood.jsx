@@ -6,7 +6,7 @@ function TheFood({time, getFood}) {
   const foodURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c='
   const [categoriesArray, setCategoriesArray] = useState([])
   const [foodURLbase, setFoodURLbase] = useState(foodURL)
-  const [userNumber, setUserNumber] = useState()
+  const [userNumber, setUserNumber] = useState(0)
   const [userMeal, setUserMeal] = useState('')
   const [userMealPhoto, setUserMealPhoto] = useState('')
   
@@ -22,14 +22,10 @@ function TheFood({time, getFood}) {
       else{
         const responseObject = await response.json()
         const categories = responseObject.categories
-        console.log(categories)
         setCategoriesArray(categories.map(category => category.strCategory))
-        console.log(categoriesArray)
         let userFoodCategoryFromTime = time.getMinutes()/categoriesArray.length >= 1 &&
         time.getMinutes()/categoriesArray.length <= 14 ? Math.round(time.getMinutes()/categoriesArray.length) : 6;
-        console.log(userFoodCategoryFromTime)
         setFoodURLbase(foodURL + categoriesArray[userFoodCategoryFromTime])
-        console.log(foodURLbase)
       }
     }
     catch(error){
@@ -48,11 +44,10 @@ function TheFood({time, getFood}) {
         const objectImage = await response.json()
         const meals = objectImage.meals
         setUserNumber(Math.round(time.getSeconds()/10))
-        console.log(meals)
         console.log(userNumber)
+        console.log(meals)
         const mealTitle = meals[userNumber].strMeal
         const mealPicture = meals[userNumber].strMealThumb
-        console.log(mealPicture)
         setUserMeal(mealTitle)
         setUserMealPhoto(mealPicture)
 
@@ -73,8 +68,8 @@ function TheFood({time, getFood}) {
 
   return (
     <div className={styles.div_meal} >
-      <p className={styles.text} >You definitely ate that yersterday: {userMeal}</p>
-      <img src={userMealPhoto} className={styles.image_food} alt="Food you ate yersyerday! For sure!" />
+      <p className={styles.text} >You definitely will eat today: {userMeal}</p>
+      <img src={userMealPhoto} className={styles.image_food} alt="Food you gonna eat today! For sure!" />
     </div>
   )
 }

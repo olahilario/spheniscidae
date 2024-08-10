@@ -6,7 +6,7 @@ function Today() {
 
   const [time, setTime] = useState(new Date());
   const [lapso, setLapso] = useState(1);
-  const [getFood, setGetFood] = useState(true)
+  const [getFood, setGetFood] = useState(false)
 
   useEffect(()=> {
     let interval = setInterval(()=>{
@@ -82,7 +82,7 @@ function Today() {
       />
       <div>
         <button className={styles.botao} onClick={stopTime}>BUTTON</button>
-        <span className={styles.msg}>"Choose" the right time to click wisely!</span>
+        <span className={styles.msg}>"Choose" the right time to click TWICE wisely!</span>
       </div>
     </div>
 
