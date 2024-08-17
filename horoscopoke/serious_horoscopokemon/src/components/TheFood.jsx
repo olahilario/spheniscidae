@@ -5,15 +5,11 @@ function TheFood({time, getFood}) {
 
   const foodURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c='
   const [categoriesArray, setCategoriesArray] = useState([])
-  const [foodURLbase, setFoodURLbase] = useState(foodURL)
-  const [userNumber, setUserNumber] = useState(0)
+  const [userFoodCategoryFromTime, setUserFoodCategoryFromTime] = useState('')
   const [userMeal, setUserMeal] = useState('')
   const [userMealPhoto, setUserMealPhoto] = useState('')
-  
-
 
   const getCategory = async function (){
-
     try{
       const response = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
       if (!response.ok){
@@ -21,36 +17,36 @@ function TheFood({time, getFood}) {
       }
       else{
         const responseObject = await response.json()
-        const categories = responseObject.categories
-        setCategoriesArray(categories.map(category => category.strCategory))
-        let userFoodCategoryFromTime = time.getMinutes()/categoriesArray.length >= 1 &&
-        time.getMinutes()/categoriesArray.length <= 14 ? Math.round(time.getMinutes()/categoriesArray.length) : 6;
-        setFoodURLbase(foodURL + categoriesArray[userFoodCategoryFromTime])
+        const categories = responseObject.categories.map(category => category.strCategory)
+        setCategoriesArray(categories)
       }
     }
     catch(error){
       console.log(error)
     }
-    return foodURLbase
+  }
+  
+  const getUserFoodCategoryFromTime = ()=>{
+    if (categoriesArray.length === 0) return;
+    const categoryIndex = time.getMinutes()/categoriesArray.length >= 1 &&
+    time.getMinutes()/categoriesArray.length <= 14 ? Math.round(time.getMinutes()/categoriesArray.length) : 6
+    setUserFoodCategoryFromTime(categoryIndex)
   }
 
-  const getImageFood = async function (foodURLbase){
+  const getImageFood = async function (){
     try{
-      const response = await fetch(foodURLbase)
+      const response = await fetch(foodURL + categoriesArray[userFoodCategoryFromTime])
       if (!response.ok){
         throw new Error('Deu ruim no fetch da imagem!')
       }
       else{
         const objectImage = await response.json()
         const meals = objectImage.meals
-        setUserNumber(Math.round(time.getSeconds()/10))
-        console.log(userNumber)
-        console.log(meals)
-        const mealTitle = meals[userNumber].strMeal
-        const mealPicture = meals[userNumber].strMealThumb
+        const mealIndex = Math.floor(time.getSeconds() / 10) % meals.length;
+        const mealTitle = meals[mealIndex].strMeal
+        const mealPicture = meals[mealIndex].strMealThumb
         setUserMeal(mealTitle)
         setUserMealPhoto(mealPicture)
-
       }
     }
     catch(error){
@@ -59,11 +55,23 @@ function TheFood({time, getFood}) {
   }
 
   useEffect(()=>{
-    getCategory()
-    if(getCategory){
-      getImageFood(foodURLbase)
+    const fetchData = async()=>{
+      await getCategory()
+    };
+    fetchData()
+  }, [])
+
+  useEffect(()=>{
+    if (categoriesArray.length > 0){
+      getUserFoodCategoryFromTime()
     }
-  }, [getFood])
+  }, [categoriesArray, getFood])
+
+  useEffect(()=>{
+    if(categoriesArray.length > 0 && userFoodCategoryFromTime !== ''){
+      getImageFood()
+    }
+  }, [categoriesArray, userFoodCategoryFromTime, getFood])
 
 
   return (

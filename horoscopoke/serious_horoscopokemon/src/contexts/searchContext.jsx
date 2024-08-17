@@ -9,6 +9,7 @@ const SearchProvider = ({ children }) => {
     const [eggs, setEggs] = useState()
     const [baths, setBaths] = useState();
     const [tags, setTags] = useState();
+    const [activity, setActivity] = useState('')
 
   const values = { 
     anything, setAnything,
@@ -16,6 +17,7 @@ const SearchProvider = ({ children }) => {
     eggs, setEggs,
     baths, setBaths,
     tags, setTags,
+    activity, setActivity
   }
 
   return (

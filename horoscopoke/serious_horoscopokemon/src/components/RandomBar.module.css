@@ -45,6 +45,9 @@
   font-family: monospace;
   font-size: 30px;
   font-weight: bolder;
+}
+
+.search_bar button span{
   color: #F24405;
 }
 

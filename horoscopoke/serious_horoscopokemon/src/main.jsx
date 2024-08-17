@@ -7,6 +7,7 @@ import About from './pages/About.jsx';
 import Today from './pages/Today.jsx';
 import Yersterday from './pages/Yersterday.jsx';
 import Tomorrow from './pages/Tomorrow.jsx';
+import Conclusion from './pages/Conclusion.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 
 
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
       {
         path: "Tomorrow",
         element: <Tomorrow />,
+      },
+
+      {
+        path: "Conclusion",
+        element: <Conclusion />
       }
     ]
   },

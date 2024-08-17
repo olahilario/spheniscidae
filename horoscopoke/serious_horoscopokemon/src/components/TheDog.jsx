@@ -15,14 +15,9 @@ function TheDog({ elapsed, isTicking, changeDogImage }) {
       }else{
         const breeds = await response.json();
         const breeds_list = Object.keys(breeds.message)
-        console.log(breeds_list)
         setUserBreedNumber((Math.round(elapsed/breeds_list.length)) < 107 ? Math.round(elapsed/breeds_list.length) : 22);
-        console.log(userBreedNumber)
-        console.log(isTicking)
         const breed = Object.keys(breeds.message)[userBreedNumber]
-        console.log(breed)
         setDogBreedLink(`https://dog.ceo/api/breed/${breed}/images/random`)
-        console.log(dogBreedLink)
       }
     }
     catch(error){
@@ -37,10 +32,8 @@ function TheDog({ elapsed, isTicking, changeDogImage }) {
       if (!response.ok){
         throw new Error ("Deu ruim aqui no image!")
       }else{
-        console.log(response)
         const dogImageLinkBase = await response.json()
         setDogImageLink(dogImageLinkBase);
-        console.log(dogImageLink)
       }
     }
     catch(error){
@@ -49,10 +42,13 @@ function TheDog({ elapsed, isTicking, changeDogImage }) {
     return dogImageLink
   }
   useEffect(()=>{
-    fetchBreeds()
-    fetchDogImageLink(dogBreedLink)
+    const initialFetch = async ()=>{
+      await fetchBreeds()
+      fetchDogImageLink(dogBreedLink)
+    }
+    initialFetch()
     
-  },[changeDogImage])
+  },[changeDogImage, dogBreedLink])
 
   return (
     <div className={styles.dogdiv}>

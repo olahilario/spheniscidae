@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import styles from './Today.module.css'
 import TheFood from '../components/TheFood';
 
@@ -20,7 +20,6 @@ function Today() {
   function stopTime(){
     setGetFood((getFood === true) ? false : true)
     setLapso(1000000)
-    console.log(getFood)
   }
 
   function reStartTime(){
@@ -39,7 +38,6 @@ function Today() {
     const minutes = time.getMinutes();
     const seconds = time.getSeconds();
     const milliseconds = time.getMilliseconds();
-
     const meridiem = hours >=12 ? 'PM' : 'AM'
     hours = hours % 12 || 12
 
